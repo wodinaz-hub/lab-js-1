@@ -1,28 +1,12 @@
-function showTeachers() {
-  document.getElementById("teachers").style.display = "block";
-  document.getElementById("students").style.display = "none";
-  document.getElementById("lessons").style.display = "none";
-  document.getElementById("st").classList.add("active");
-  document.getElementById("sl").classList.remove("active");
-  document.getElementById("ss").classList.remove("active");
+function openTab(tabId, buttonId) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.style.display = "none";
+    });
+    document.querySelectorAll('.tabs button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.getElementById(tabId).style.display = "block";
+    document.getElementById(buttonId).classList.add("active");
 }
 
-function showStudents() {
-  document.getElementById("teachers").style.display = "none";
-  document.getElementById("students").style.display = "block";
-  document.getElementById("lessons").style.display = "none";
-  document.getElementById("st").classList.remove("active");
-  document.getElementById("sl").classList.remove("active");
-  document.getElementById("ss").classList.add("active");
-}
-
-function showLessons() {
-  document.getElementById("teachers").style.display = "none";
-  document.getElementById("students").style.display = "none";
-  document.getElementById("lessons").style.display = "block";
-  document.getElementById("st").classList.remove("active");
-  document.getElementById("sl").classList.add("active");
-  document.getElementById("ss").classList.remove("active");
-}
-
-showTeachers();
+openTab("teachers", "st");

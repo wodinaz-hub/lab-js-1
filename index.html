@@ -9,11 +9,11 @@
   </head>
   <body>
     <div class="tabs">
-    <button id="st" class="active" onclick="showTeachers()">Вичтелі</button>
-    <button id="ss" onclick="showStudents()">Учні</button>
-    <button id="sl" onclick="showLessons()">Предмети</button>
+    <button id="st" class="active" onclick="openTab('teachers', 'st')">Вичтелі</button>
+    <button id="ss" onclick="openTab('students', 'ss')">Учні</button>
+    <button id="sl" onclick="openTab('lessons', 'sl')">Предмети</button>
     </div>
-    <div id="teachers">
+    <div id="teachers" class="tab-content">
       <table>
         <tr>
           <th>ID</th>
@@ -32,7 +32,7 @@
       </table>
     </div>
     
-    <div id="students">
+    <div id="students" class="tab-content">
       <table>
         <tr>
           <th>ID</th>
@@ -52,7 +52,7 @@
     </div>
 
     
-    <div id="lessons">
+    <div id="lessons" class="tab-content">
       <table>
         <tr>
           <th>ID</th>
